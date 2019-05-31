@@ -86,11 +86,11 @@ function displayQuestions() {
             var answerButton = $("<input>");
             answerButton.addClass("answer-choice");
             answerButton.attr("type", "radio");
+            answerButton.attr("button-value", j); // change this to work with strings
+            //     answerButton.attr("button-value", questions[i].answers[j]);
             answerDiv.append(answerButton);
             questionAnswerDiv.append(answerDiv);
-            // answerButton.attr("button-value", j); // change this to work with strings
-            //     answerButton.attr("button-value", questions[i].answers[j]);
-            
+
         }
 
     };
