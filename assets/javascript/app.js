@@ -57,9 +57,8 @@ var timer = 30;
 var intervalId;
 var isClockRunning = false;
 // USER INPUT VARIABLES
-var userAnswer;
+// var userAnswer;
 
-// display questions and answers dynamically
 function displayQuestions() {
 
     // select the div with matching id 
@@ -77,7 +76,6 @@ function displayQuestions() {
         questionDiv.addClass("question");
         questionAnswerDiv.append(questionDiv);
 
-
         // 2. create a container to hold answers and insert into questionAnswerDiv
         for (var j = 0; j < questions[i].answers.length; j++) {
             var answerDiv = $("<div>" + questions[i].answers[j] + "</div>");
@@ -86,7 +84,7 @@ function displayQuestions() {
             var answerButton = $("<input>");
             answerButton.addClass("answer-choice");
             answerButton.attr("type", "radio");
-            answerButton.attr("button-value", j); // change this to work with strings
+            answerButton.attr("value", j); // change this to work with strings
             //     answerButton.attr("button-value", questions[i].answers[j]);
             answerDiv.append(answerButton);
             questionAnswerDiv.append(answerDiv);
@@ -95,6 +93,7 @@ function displayQuestions() {
 
     };
 
+    $("#game-display").hide();
 }
 
 
@@ -113,11 +112,18 @@ function checkAnswers() {
 // click start button
 $("#start").on("click", function () {
     $("#start").hide();
-    displayQuestions();
+    $("#game-display").show();
 });
+
+displayQuestions();
 
 // pick an answer
 $(".answer-choice").on("click", function () {
 
+    // create a variable to hold the user answer
+    var userAnswer = $(this).val();
+    console.log("You clicked = " + userAnswer);
+
     checkAnswers();
+
 })

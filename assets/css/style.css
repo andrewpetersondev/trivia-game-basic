@@ -1,0 +1,8 @@
+body {
+    /* background-color: orange; */
+    background-image: url(../images/background-image.jpg);
+}
+
+#game-display {
+    background-color: aliceblue;
+}
