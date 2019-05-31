@@ -62,32 +62,35 @@ var userAnswer;
 // display questions and answers dynamically
 function displayQuestions() {
 
-    var questionDiv = $("#game-display");
+    // select the div with matching id 
+    var gameDisplay = $("#game-display");
 
-    // 1. display questions by iterating through questions array
+    // 1. create container to hold question and answer 
     for (var i = 0; i < questions.length; i++) {
 
-        
-        $("#game-display").append("<div>" + questions[i].question + "</div>");
+        // create a div container for each question and answer
+        var questionAnswerDiv = $("<div>");
+        questionAnswerDiv.addClass("object-container");
+        gameDisplay.append(questionAnswerDiv);
 
-        // create a variable to store user pick?
-        // var userAnswer;
+        var questionDiv = $("<div>" + questions[i].question + "</div>");
+        questionDiv.addClass("question");
+        questionAnswerDiv.append(questionDiv);
 
-        // 2. iterate through answer array for each question
+
+        // 2. create a container to hold answers and insert into questionAnswerDiv
         for (var j = 0; j < questions[i].answers.length; j++) {
-            $("#game-display").append("<span>" + questions[i].answers[j] + "</span>");
-            // dynamically create input button
+            var answerDiv = $("<div>" + questions[i].answers[j] + "</div>");
+            answerDiv.addClass("answers");
+            // dynamically create input buttons
             var answerButton = $("<input>");
-            // add class to button
             answerButton.addClass("answer-choice");
-            // set attributes to button
             answerButton.attr("type", "radio");
+            answerDiv.append(answerButton);
+            questionAnswerDiv.append(answerDiv);
             // answerButton.attr("button-value", j); // change this to work with strings
-            answerButton.attr("button-value", questions[i].answers[j]);
-            answerButton.attr("isChecked");
-            // insert button to html
-            $("#game-display").append(answerButton);
-
+            //     answerButton.attr("button-value", questions[i].answers[j]);
+            
         }
 
     };
@@ -115,6 +118,6 @@ $("#start").on("click", function () {
 
 // pick an answer
 $(".answer-choice").on("click", function () {
-    
+
     checkAnswers();
 })
