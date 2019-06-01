@@ -3,6 +3,10 @@ body {
     background-image: url(../images/background-image.jpg);
 }
 
+#timer {
+    background-color: aliceblue;
+}
+
 #game-display {
     background-color: aliceblue;
 }
