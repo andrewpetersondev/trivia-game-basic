@@ -1,7 +1,15 @@
 body {
     /* background-color: orange; */
     background-image: url(../images/background-image.jpg);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    background-color: aliceblue;
+    text-align: center;
+    margin: 3%;
+}
+
 
 #timer {
     background-color: aliceblue;
@@ -11,6 +19,32 @@ body {
     background-color: aliceblue;
 }
 
+.object-container {
+    margin: 3%;
+}
+
+.question {
+    font-size: 30px;
+}
+
+.answers {
+    display: inline;
+    font-size: 20px;
+    border: 2px solid red;
+    margin: 5px;
+}
+
 #results {
     background-color: aliceblue;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
 }

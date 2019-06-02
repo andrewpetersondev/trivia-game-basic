@@ -49,11 +49,11 @@ $(document).ready(function () {
     var intervalId;
     var isClockRunning = false;
 
-    function initializeGame() {
+    // ============================= FUNCTIONS ==================================================================
 
+    function initializeGame() {
         // select the div with matching id 
         var gameDisplay = $("#game-display");
-
         // 1. create container to hold question and answer 
         for (var i = 0; i < questions.length; i++) {
             // create a div container for each question and answer
@@ -82,15 +82,10 @@ $(document).ready(function () {
         $("#game-display").hide();
     }
 
-    // game over
     function endGame() {
-        // loop through questions
         for (var i = 0; i < questions.length; i++) {
-            // store user pick for each question
             var userPick = $("input[name = " + i + "]:checked").val();
             // console.log("user pick = " + userPick);
-            // console.log(userPick.val());
-            // if user pick does not exist
             if (!userPick) {
                 unAnswerCount++;
                 continue;
@@ -100,9 +95,8 @@ $(document).ready(function () {
                 // console.log('correct', i);
                 correctAnswerCount++;
             }
-            // if user picked incorrect answer
             else {
-                // console.log('NOT correct', i);
+                // console.log("NOT correct", i);
                 // console.log(questions[i]);
                 // console.log(questions[i].correctAnswer);
                 // console.log(userPick);
@@ -111,7 +105,6 @@ $(document).ready(function () {
         }
         $("#game-display").hide();
         displayResults();
-        // displayResults().show();
         $("#results").show();
     }
 
@@ -121,7 +114,6 @@ $(document).ready(function () {
         $("#results").append("Unanswered : " + unAnswerCount);
     }
 
-    // function to start timer
     function startTimer() {
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
@@ -138,7 +130,6 @@ $(document).ready(function () {
         }
     }
 
-    // function to stop timer
     function stopTimer() {
         clearInterval(intervalId);
     }
@@ -149,7 +140,6 @@ $(document).ready(function () {
 
     $("#results").hide();
 
-    // click start button
     $("#start").on("click", function () {
         $("#start").hide();
         $("#game-display").show();
@@ -161,6 +151,7 @@ $(document).ready(function () {
 
     $("#submitBtn").on("click", function () {
         $("#submitBtn").hide();
+        stopTimer();
         endGame();
     })
 
