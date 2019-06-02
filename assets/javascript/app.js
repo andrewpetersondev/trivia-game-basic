@@ -126,6 +126,7 @@ $(document).ready(function () {
         $("#timer").html("<h2> Time Remaining: " + timer + " Seconds </h2>");
         if (timer === 0) {
             stopTimer();
+            $("#submitBtn").hide();
             endGame();
         }
     }
