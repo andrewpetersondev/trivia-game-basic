@@ -109,9 +109,9 @@ $(document).ready(function () {
     }
 
     function displayResults() {
-        $("#results").append("Correct Answers : " + correctAnswerCount);
-        $("#results").append("Incorrect Answers : " + incorrectAnswerCount);
-        $("#results").append("Unanswered : " + unAnswerCount);
+        $("#correct-count").html("Correct Answers : " + correctAnswerCount);
+        $("#incorrect-count").html("Incorrect Answers : " + incorrectAnswerCount);
+        $("#unanswered-count").html("Unanswered : " + unAnswerCount);
     }
 
     function startTimer() {
