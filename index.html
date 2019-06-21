@@ -14,15 +14,28 @@
     <!-- container for all code -->
     <div class="container">
 
-        <h1>Basic Trivia Game</h1>
-        <button id="start">start</button>
-        <div id="timer"></div>
-        <div id="game-display"></div>
+        <!-- header -->
+        <h1 id="title">Basic Trivia Game</h1>
+
+
+        <!-- div to hold game display -->
+        <div id="game-container">
+            <!-- start button -->
+            <button id="start">start</button>
+            <!-- timer -->
+            <div id="timer"></div>
+            <!-- game questions display -->
+            <div id="game-questions-display"></div>
+        </div>
+
+        <!-- game results -->
         <div id="results">
             <div id="correct-count"></div>
             <div id="incorrect-count"></div>
             <div id="unanswered-count"></div>
         </div>
+
+        <!-- submit button -->
         <button id="submitBtn">Submit</button>
 
     </div>
