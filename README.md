@@ -1,5 +1,9 @@
 # trivia-game-basic
 
+## Take a look
+
+**[Basic Trivia Game](https://andrewpetersondev.github.io/trivia-game-basic/)**
+
 ## Technologies Used
 
 - HTML 5
@@ -30,3 +34,5 @@ In Progress.
 ## Sources
 
 This project may have code from class activities, office hours notes, or from seeking help from TAs and teachers.
+
+[Watch the Video!](https://www.youtube.com/watch?v=3eWhkc_u5rE)
