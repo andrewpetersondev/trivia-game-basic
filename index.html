@@ -1,50 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Basic Trivia Game</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="utf-8" />
+  <title>Basic Trivia Game</title>
+  <!-- CSS Reset Sheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-    <!-- container for all code -->
-    <div class="container">
-
-        <!-- header -->
-        <h1 id="title">Basic Trivia Game</h1>
-
-
-        <!-- div to hold game display -->
-        <div id="game-container">
-            <!-- start button -->
-            <button id="start">start</button>
-            <!-- timer -->
-            <div id="counter"></div>
-            <!-- game questions display -->
-            <div id="game-questions-display"></div>
-        </div>
-
-        <!-- game results -->
-        <div id="results">
-            <div id="correct-count"></div>
-            <div id="incorrect-count"></div>
-            <div id="unanswered-count"></div>
-        </div>
-
-        <!-- submit button -->
-        <button id="submitBtn">Submit</button>
-
+  <div id="wrapper">
+    <h1>Basic Trivia Game</h1>
+    <div id="sub-wrapper">
+      <div id="quiz-area">
+        <button id="start">start</button>
+      </div>
     </div>
+  </div>
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- custom javascript -->
-    <script src="./assets/javascript/app.js"></script>
-
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
